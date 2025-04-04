@@ -12,7 +12,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.home, color: Colors.white),
+        leading: IconButton(
+          onPressed: () => print("Home"),
+          icon: Icon(Icons.home, color: Colors.white),
+        ),
         title: const Text("Home Page", style: TextStyle(color: Colors.white)),
         actions: [
           IconButton(
