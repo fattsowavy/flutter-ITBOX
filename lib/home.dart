@@ -21,13 +21,14 @@ class _HomeState extends State<Home> {
         ],
         backgroundColor: Colors.deepPurple,
       ),
-      body: ElevatedButton(
-        onPressed: () => print("Tombol ditekan"),
-        child: Text(
-          "Elevated Button",
-          style: TextStyle(color: Colors.deepOrange, fontSize: 25),
-        ),
-      ),
+      body: Image.asset("assets/images/panda.jpeg", width: 300, height: 300),
+      // body: ElevatedButton(
+      //   onPressed: () => print("Tombol ditekan"),
+      //   child: Text(
+      //     "Elevated Button",
+      //     style: TextStyle(color: Colors.deepOrange, fontSize: 25),
+      //   ),
+      // ),
 
       // body: IconButton(
       //   onPressed: () {
