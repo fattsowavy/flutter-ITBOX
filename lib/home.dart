@@ -15,71 +15,36 @@ class _HomeState extends State<Home> {
         leading: Icon(Icons.home, color: Colors.white),
         title: const Text("Home Page", style: TextStyle(color: Colors.white)),
         actions: [
-          Icon(Icons.search, color: Colors.white),
-          Icon(Icons.person, color: Colors.white),
-          Padding(padding: const EdgeInsets.all(5.0)),
+          IconButton(
+            onPressed: () => print("Search"),
+            icon: Icon(Icons.search, color: Colors.white),
+          ),
+          IconButton(
+            onPressed: () => print("Profile"),
+            icon: Icon(Icons.person, color: Colors.white),
+          ),
+          Padding(padding: const EdgeInsets.all(1.0)),
         ],
         backgroundColor: Colors.deepPurple,
       ),
       body: Container(
-        child: Row(
-          children: [
-            Column(
-              children: [
-                Image.asset(
-                  "assets/images/panda.jpeg",
-                  width: 200,
-                  height: 100,
+        child: Center(
+          child: Column(
+            children: [
+              Image.asset("assets/images/panda.jpeg", width: 200, height: 100),
+              ElevatedButton(
+                onPressed: () => print("Tombol ditekan"),
+                child: Text(
+                  "Elevated Button",
+                  style: TextStyle(color: Colors.deepOrange, fontSize: 15),
                 ),
-                ElevatedButton(
-                  onPressed: () => print("Tombol ditekan"),
-                  child: Text(
-                    "Elevated Button",
-                    style: TextStyle(color: Colors.deepOrange, fontSize: 15),
-                  ),
-                ),
-                IconButton(
-                  onPressed: () {
-                    print("Tombol ditekan");
-                  },
-                  icon: Icon(Icons.alarm_add),
-                  color: Colors.red,
-                  iconSize: 30,
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                Image.asset(
-                  "assets/images/panda.jpeg",
-                  width: 100,
-                  height: 100,
-                ),
-                ElevatedButton(
-                  onPressed: () => print("Tombol ditekan"),
-                  child: Text(
-                    "Elevated Button",
-                    style: TextStyle(color: Colors.deepOrange, fontSize: 15),
-                  ),
-                ),
-                IconButton(
-                  onPressed: () {
-                    print("Tombol ditekan");
-                  },
-                  icon: Icon(Icons.alarm_add),
-                  color: Colors.red,
-                  iconSize: 30,
-                ),
-              ],
-            ),
-          ],
+              ),
+              Text("Nama: "),
+              Text("Panda"),
+            ],
+          ),
         ),
       ),
-
-      // body: Text(
-      //   "Ini adalah halaman Home",
-      //   style: TextStyle(color: Colors.deepPurple[400], fontSize: 30),
-      // ),
     );
   }
 }
