@@ -21,23 +21,60 @@ class _HomeState extends State<Home> {
         ],
         backgroundColor: Colors.deepPurple,
       ),
-      body: Image.asset("assets/images/panda.jpeg", width: 300, height: 300),
-      // body: ElevatedButton(
-      //   onPressed: () => print("Tombol ditekan"),
-      //   child: Text(
-      //     "Elevated Button",
-      //     style: TextStyle(color: Colors.deepOrange, fontSize: 25),
-      //   ),
-      // ),
-
-      // body: IconButton(
-      //   onPressed: () {
-      //     print("Tombol ditekan");
-      //   },
-      //   icon: Icon(Icons.alarm_add),
-      //   color: Colors.red,
-      //   iconSize: 50,
-      // ),
+      body: Container(
+        child: Row(
+          children: [
+            Column(
+              children: [
+                Image.asset(
+                  "assets/images/panda.jpeg",
+                  width: 200,
+                  height: 100,
+                ),
+                ElevatedButton(
+                  onPressed: () => print("Tombol ditekan"),
+                  child: Text(
+                    "Elevated Button",
+                    style: TextStyle(color: Colors.deepOrange, fontSize: 15),
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    print("Tombol ditekan");
+                  },
+                  icon: Icon(Icons.alarm_add),
+                  color: Colors.red,
+                  iconSize: 30,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Image.asset(
+                  "assets/images/panda.jpeg",
+                  width: 100,
+                  height: 100,
+                ),
+                ElevatedButton(
+                  onPressed: () => print("Tombol ditekan"),
+                  child: Text(
+                    "Elevated Button",
+                    style: TextStyle(color: Colors.deepOrange, fontSize: 15),
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    print("Tombol ditekan");
+                  },
+                  icon: Icon(Icons.alarm_add),
+                  color: Colors.red,
+                  iconSize: 30,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
 
       // body: Text(
       //   "Ini adalah halaman Home",
