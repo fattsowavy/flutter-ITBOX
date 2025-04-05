@@ -44,6 +44,17 @@ class _HomeState extends State<Home> {
               ),
               Text("Nama: "),
               Text("Panda"),
+              SizedBox(height: 20),
+              Image.asset("assets/images/panda.jpeg", width: 200, height: 100),
+              ElevatedButton(
+                onPressed: () => print("Tombol ditekan"),
+                child: Text(
+                  "Elevated Button",
+                  style: TextStyle(color: Colors.deepOrange, fontSize: 15),
+                ),
+              ),
+              Text("Nama: "),
+              Text("Panda"),
             ],
           ),
         ),
