@@ -1,6 +1,7 @@
 import 'package:basic_flutter/home.dart';
 import 'package:basic_flutter/secondPage.dart';
 import 'package:flutter/material.dart';
+import 'package:basic_flutter/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,10 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(),
       initialRoute: '/',
-      routes: {'/second-page': (context) => SecondPage()},
+      routes: {
+        '/second-page': (context) => SecondPage(),
+        '/home': (context) => Home(),
+      },
     );
   }
 }
@@ -53,6 +57,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 // );
               },
               child: Text("Go to Second Page"),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/home');
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) {
+                //       return SecondPage();
+                //     },
+                //   ),
+                // );
+              },
+              child: Text("Go to Panda Page"),
             ),
           ],
         ),
