@@ -13,6 +13,7 @@ class _HomeState extends State<Home> {
       margin: const EdgeInsets.all(8),
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
+        color: Colors.pinkAccent[100],
         border: Border.all(width: 2, color: Colors.black),
         borderRadius: BorderRadius.circular(10),
       ),

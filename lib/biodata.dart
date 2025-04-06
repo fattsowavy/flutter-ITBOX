@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Biodata extends StatelessWidget {
   const Biodata({super.key});
@@ -16,6 +17,7 @@ class Biodata extends StatelessWidget {
           ),
         ),
         title: Text("Biodata", style: TextStyle(color: Colors.pinkAccent[200])),
+        centerTitle: true,
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
@@ -64,6 +66,28 @@ class Biodata extends StatelessWidget {
                           fontFamily: "Bebas",
                           color: Colors.white,
                         ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 50),
+                Container(
+                  child: Column(
+                    children: [
+                      Text("CERTIFICATION", style: TextStyle(fontSize: 20)),
+                      Image.asset("assets/images/certif1.jpg", width: 360),
+                      SizedBox(height: 10),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: WidgetStatePropertyAll(Colors.white),
+                        ),
+                        onPressed: () {
+                          launchUrl(
+                            Uri.parse("https://github.com"),
+                            mode: LaunchMode.externalApplication,
+                          );
+                        },
+                        child: Text("Show Credentials"),
                       ),
                     ],
                   ),
