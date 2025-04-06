@@ -1,7 +1,9 @@
 import 'package:basic_flutter/biodata.dart';
 import 'package:basic_flutter/home.dart';
 import 'package:basic_flutter/secondPage.dart';
+import 'package:basic_flutter/testGetX.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -91,6 +93,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
 
               child: Text("Go to Biodata Page"),
+            ),
+
+            SizedBox(height: 20),
+            Text("Test getX Page"),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() => Testgetx());
+              },
+
+              child: Text("Test getX"),
             ),
           ],
         ),
