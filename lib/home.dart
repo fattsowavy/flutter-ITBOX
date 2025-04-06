@@ -20,6 +20,7 @@ class _HomeState extends State<Home> {
         children: [
           Image.asset("assets/images/panda.jpeg", width: 100, height: 100),
           ElevatedButton(
+            // ignore: avoid_print
             onPressed: () => print("Panda"),
             child: Text(
               "Panda Button",
@@ -38,6 +39,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
+            print("Go Back");
             Navigator.of(context).pop('/');
           },
           icon: Icon(Icons.arrow_back_ios_new, color: Colors.white),

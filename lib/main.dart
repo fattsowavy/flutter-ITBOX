@@ -1,7 +1,7 @@
+import 'package:basic_flutter/biodata.dart';
 import 'package:basic_flutter/home.dart';
 import 'package:basic_flutter/secondPage.dart';
 import 'package:flutter/material.dart';
-import 'package:basic_flutter/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/second-page': (context) => SecondPage(),
         '/home': (context) => Home(),
+        '/biodata': (context) => Biodata(),
       },
     );
   }
@@ -43,7 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: [
-            Text("This is Main Page"),
+            Text(
+              "This is Main Page",
+              style: TextStyle(fontSize: 20, color: Colors.pinkAccent),
+            ),
+            SizedBox(height: 50),
+
+            Text("Second Page"),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/second-page');
@@ -56,9 +63,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 //   ),
                 // );
               },
-              child: Text("Go to Second Page"),
+              child: Text("Second Page"),
             ),
             SizedBox(height: 20),
+            Text("Panda Page"),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/home');
@@ -71,7 +79,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 //   ),
                 // );
               },
+
               child: Text("Go to Panda Page"),
+            ),
+
+            SizedBox(height: 20),
+            Text("Biodata Page"),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/biodata');
+              },
+
+              child: Text("Go to Biodata Page"),
             ),
           ],
         ),
