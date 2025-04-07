@@ -1,3 +1,4 @@
+import 'package:basic_flutter/DarkMode.dart';
 import 'package:basic_flutter/biodata.dart';
 import 'package:basic_flutter/home.dart';
 import 'package:basic_flutter/secondPage.dart';
@@ -103,6 +104,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
 
               child: Text("Test getX"),
+            ),
+
+            SizedBox(height: 20),
+            Text("Dark Mode  Page"),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() => DarkMode());
+              },
+
+              child: Text("Go to Dark Mode Page"),
             ),
           ],
         ),
