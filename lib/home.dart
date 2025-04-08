@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -22,7 +23,14 @@ class _HomeState extends State<Home> {
           Image.asset("assets/images/panda.jpeg", width: 100, height: 100),
           ElevatedButton(
             // ignore: avoid_print
-            onPressed: () => print("Panda"),
+            onPressed: () {
+              Get.snackbar(
+                "Hello Panda",
+                "Test",
+                snackPosition: SnackPosition.TOP,
+                duration: Duration(seconds: 3),
+              );
+            },
             child: Text(
               "Panda Button",
               style: TextStyle(color: Colors.pinkAccent[100], fontSize: 15),
