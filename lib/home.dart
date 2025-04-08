@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
             onPressed: () => print("Panda"),
             child: Text(
               "Panda Button",
-              style: TextStyle(color: Colors.black, fontSize: 15),
+              style: TextStyle(color: Colors.pinkAccent[100], fontSize: 15),
             ),
           ),
           Text("Nama: Panda"),

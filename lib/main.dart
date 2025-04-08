@@ -1,3 +1,4 @@
+import 'package:basic_flutter/BeliMakanan.dart';
 import 'package:basic_flutter/DarkMode.dart';
 import 'package:basic_flutter/biodata.dart';
 import 'package:basic_flutter/home.dart';
@@ -43,7 +44,17 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Navigation and Routing")),
+      appBar: AppBar(
+        title: Text("Navigation and Routing"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Get.to(Biodata());
+            },
+            icon: Icon(Icons.person),
+          ),
+        ],
+      ),
       body: Center(
         child: Column(
           children: [
@@ -114,6 +125,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
 
               child: Text("Go to Dark Mode Page"),
+            ),
+
+            SizedBox(height: 20),
+            Text("Beli Makan Page"),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() => BeliMakanan());
+              },
+
+              child: Text("Go to Beli Makan Page"),
             ),
           ],
         ),

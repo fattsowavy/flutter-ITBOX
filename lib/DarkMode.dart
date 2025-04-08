@@ -10,7 +10,7 @@ class DarkMode extends StatefulWidget {
 }
 
 class _DarkModeState extends State<DarkMode> {
-  String mode = "Dark";
+  String mode = "";
 
   @override
   Widget build(BuildContext context) {

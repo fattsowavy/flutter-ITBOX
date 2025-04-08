@@ -83,11 +83,16 @@ class Biodata extends StatelessWidget {
                         ),
                         onPressed: () {
                           launchUrl(
-                            Uri.parse("https://github.com"),
+                            Uri.parse(
+                              "https://itbox.id/certificate-verifier/13EF9F3C2-13F17B5BA-12D455302/",
+                            ),
                             mode: LaunchMode.externalApplication,
                           );
                         },
-                        child: Text("Show Credentials"),
+                        child: Text(
+                          "Show Credentials",
+                          style: TextStyle(color: Colors.black54, fontSize: 15),
+                        ),
                       ),
                     ],
                   ),
