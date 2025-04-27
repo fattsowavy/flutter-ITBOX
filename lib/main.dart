@@ -4,6 +4,7 @@ import 'package:basic_flutter/biodata.dart';
 import 'package:basic_flutter/home.dart';
 import 'package:basic_flutter/secondPage.dart';
 import 'package:basic_flutter/testGetX.dart';
+import 'package:basic_flutter/StackLayout.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -55,88 +56,100 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Text(
-              "This is Main Page",
-              style: TextStyle(fontSize: 20, color: Colors.pinkAccent),
-            ),
-            SizedBox(height: 50),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              Text(
+                "This is Main Page",
+                style: TextStyle(fontSize: 20, color: Colors.pinkAccent),
+              ),
+              SizedBox(height: 50),
 
-            Text("Second Page"),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/second-page');
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) {
-                //       return SecondPage();
-                //     },
-                //   ),
-                // );
-              },
-              child: Text("Second Page"),
-            ),
-            SizedBox(height: 20),
-            Text("Panda Page"),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/home');
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) {
-                //       return SecondPage();
-                //     },
-                //   ),
-                // );
-              },
+              Text("Second Page"),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/second-page');
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) {
+                  //       return SecondPage();
+                  //     },
+                  //   ),
+                  // );
+                },
+                child: Text("Second Page"),
+              ),
+              SizedBox(height: 20),
+              Text("Panda Page"),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/home');
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) {
+                  //       return SecondPage();
+                  //     },
+                  //   ),
+                  // );
+                },
 
-              child: Text("Go to Panda Page"),
-            ),
+                child: Text("Go to Panda Page"),
+              ),
 
-            SizedBox(height: 20),
-            Text("Biodata Page"),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/biodata');
-              },
+              SizedBox(height: 20),
+              Text("Biodata Page"),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/biodata');
+                },
 
-              child: Text("Go to Biodata Page"),
-            ),
+                child: Text("Go to Biodata Page"),
+              ),
 
-            SizedBox(height: 20),
-            Text("Test getX Page"),
-            ElevatedButton(
-              onPressed: () {
-                Get.to(() => Testgetx());
-              },
+              SizedBox(height: 20),
+              Text("Test getX Page"),
+              ElevatedButton(
+                onPressed: () {
+                  Get.to(() => Testgetx());
+                },
 
-              child: Text("Test getX"),
-            ),
+                child: Text("Test getX"),
+              ),
 
-            SizedBox(height: 20),
-            Text("Dark Mode  Page"),
-            ElevatedButton(
-              onPressed: () {
-                Get.to(() => DarkMode());
-              },
+              SizedBox(height: 20),
+              Text("Dark Mode  Page"),
+              ElevatedButton(
+                onPressed: () {
+                  Get.to(() => DarkMode());
+                },
 
-              child: Text("Go to Dark Mode Page"),
-            ),
+                child: Text("Go to Dark Mode Page"),
+              ),
 
-            SizedBox(height: 20),
-            Text("Beli Makan Page"),
-            ElevatedButton(
-              onPressed: () {
-                Get.to(() => BeliMakanan());
-              },
+              SizedBox(height: 20),
+              Text("Beli Makan Page"),
+              ElevatedButton(
+                onPressed: () {
+                  Get.to(() => BeliMakanan());
+                },
 
-              child: Text("Go to Beli Makan Page"),
-            ),
-          ],
+                child: Text("Go to StackLayout Page"),
+              ),
+
+              SizedBox(height: 20),
+              Text("Stack Layout"),
+              ElevatedButton(
+                onPressed: () {
+                  Get.to(() => StackLayout());
+                },
+
+                child: Text("Go to Stack Layout Page"),
+              ),
+            ],
+          ),
         ),
       ),
     );
