@@ -3,6 +3,7 @@ import 'package:basic_flutter/DarkMode.dart';
 import 'package:basic_flutter/biodata.dart';
 import 'package:basic_flutter/home.dart';
 import 'package:basic_flutter/secondPage.dart';
+import 'package:basic_flutter/silver_app_bar.dart';
 import 'package:basic_flutter/testGetX.dart';
 import 'package:basic_flutter/StackLayout.dart';
 import 'package:flutter/material.dart';
@@ -136,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Get.to(() => BeliMakanan());
                 },
 
-                child: Text("Go to StackLayout Page"),
+                child: Text("Go to Beli Makan Page"),
               ),
 
               SizedBox(height: 20),
@@ -147,6 +148,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
 
                 child: Text("Go to Stack Layout Page"),
+              ),
+
+              SizedBox(height: 20),
+              Text("Silver App Bar"),
+              ElevatedButton(
+                onPressed: () {
+                  Get.to(() => SilverAppBar());
+                },
+
+                child: Text("Go to Silver AppBar Page"),
               ),
             ],
           ),
